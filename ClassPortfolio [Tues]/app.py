@@ -11,9 +11,13 @@ wsgi_app = app.wsgi_app
 
 
 @app.route('/')
-def hello():
+def home():
     """Renders a the main page with links to each dictionary."""
     return render_template("index.html")
+
+@app.route('/test')
+def test():
+    return #does not currently return a page.
 
 if __name__ == '__main__':
     import os

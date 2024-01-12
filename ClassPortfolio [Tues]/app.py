@@ -2,7 +2,7 @@
 This script runs the application using a development server.
 It contains the definition of routes and views for the application.
 """
-
+import webbrowser
 from flask import Flask, render_template
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def home():
 
 @app.route('/test')
 def test():
-    return #does not currently return a page.
+    webbrowser.open_new(app)
 
 if __name__ == '__main__':
     import os
